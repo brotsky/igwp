@@ -1,0 +1,42 @@
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.core";
+@import "../../../node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.glide {
+
+  .glide__track {
+    .glide__slides {
+
+      padding: 0;
+      margin: 0;
+
+      .slide-background {
+        background-size: cover;
+        background-position: right;
+        width: 100vw;
+        height: 600px;
+      }
+    }
+  }
+
+  .glide__bullets {
+    
+    .glide__bullet {
+
+      background-color: $color__grey;
+      width: 75px;
+      height: 10px;
+      border-radius: 0;
+
+      &:hover, &:focus {
+        border-color: $color__light_brown;
+      }
+
+      &.glide__bullet--active {
+        background-color: $color__light_brown;
+      }
+
+    }
+
+  }
+
+}

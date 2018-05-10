@@ -43,10 +43,7 @@ gulp.task('life-watch', function () {
     livereload.listen();
     gulp.watch('sass/**/*.scss', ['sass']).on('change', livereload.changed);
     gulp.watch('dev/**/*.js', ['js']).on('change', livereload.changed);
-    gulp.watch('**/*.php').on('change', function (file) {
-        livereload.changed(file.path);
-        util.log(util.colors.yellow('File changed' + ' (' + file.path + ')'));
-    });
+    gulp.watch('**/*.php').on('change', livereload.changed);
 });
 
 gulp.task('default', ['sass', 'js']);
