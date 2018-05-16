@@ -12,5 +12,6 @@ get_header();
     <?php get_template_part("template-parts/home-page-works"); ?>
     <?php get_template_part("template-parts/home-page-contact"); ?>
 </main><!-- #main -->
+<?php get_template_part("template-parts/preloader"); ?>
 <?php
 get_footer();
