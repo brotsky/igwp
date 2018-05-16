@@ -1,0 +1,27 @@
+#preloader {
+  width: 100vw;
+  height: 100vh;
+  background: $color__brown;
+  color: $color__white;
+
+  svg {
+    .infinite, .manufacturing, .group, {
+      fill: $color__white;
+    }
+
+    #icon {
+      .red {
+        fill: $color__red;
+      }
+      .orange {
+        fill: $color__orange;
+      }
+      .red-orange {
+        fill: $color__red-orange;
+      }
+      .purple {
+        fill: $color__purple;
+      }
+    }
+  }
+}
