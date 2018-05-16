@@ -1,1 +1,14 @@
 @import "carousel";
+
+#fold-navigation {
+  position: fixed;
+  right: 100px;
+  top: 50%;
+  margin: 0;
+  list-style: none;
+
+  li {
+    cursor: pointer;
+    color: $color__light-brown;
+  }
+}

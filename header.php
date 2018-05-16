@@ -38,6 +38,15 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<?php if(is_front_page()){ ?>
+		<ul id="fold-navigation">
+			<li data-section-name="home">01</li>
+			<li data-section-name="about-us">02</li>
+			<li data-section-name="works">03</li>
+			<li data-section-name="contact">04</li>
+		</ul>
+		<?php } ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
