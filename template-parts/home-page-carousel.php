@@ -1,7 +1,7 @@
 <?php
   $images = get_field('images');
   if($images) { ?>
-<section>
+<section class="fold" id="home-slides" data-section-name="home">
   <div class="glide">
     <div class="glide__track" data-glide-el="track">
       <ul class="glide__slides">

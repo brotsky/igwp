@@ -4,9 +4,11 @@
   "description": "WordPress theme for RTR",
   "main": "gulpfile.js",
   "dependencies": {
+    "@glidejs/glide": "^3.0.3",
     "gulp": "^3.9.1",
-    "npm": "^5.8.0",
-    "@glidejs/glide": "^3.0.3"
+    "gulp-plumber": "^1.2.0",
+    "jquery-scrollify": "^1.0.19",
+    "npm": "^5.8.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
@@ -20,8 +22,6 @@
     "gulp-sourcemaps": "^2.6.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
-    "imagemin-mozjpeg": "^7.0.0",
-    "imagemin-pngquant": "^5.1.0",
     "jshint": "^2.9.5"
   },
   "scripts": {
