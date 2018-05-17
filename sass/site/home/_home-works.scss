@@ -1,0 +1,18 @@
+#home-works {
+  padding-top: 100px;
+
+  > .container-fluid {
+    height: 100%;
+
+    > .row {
+      height: 100%;
+    }
+  }
+
+}
+
+.admin-bar {
+  #home-works {
+    padding-top: 132px;
+  }
+}
