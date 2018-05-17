@@ -1,3 +1,10 @@
+<?php
+$enablePreloader = true;
+if(isset($_GET['preloader']) && $_GET['preloader'] === 'false')
+  $enablePreloader = false;
+
+if($enablePreloader) {
+?>
 <div id="preloader" class="fixed-top">
   <div class="container h-100">
     <div class="row align-items-center h-100">
@@ -259,3 +266,4 @@
     </div>
   </div>
 </div>
+<?php } ?>
