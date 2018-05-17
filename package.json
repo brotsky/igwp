@@ -4,6 +4,7 @@
   "description": "WordPress theme for RTR",
   "main": "gulpfile.js",
   "dependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@glidejs/glide": "^3.0.3",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.2.0",
