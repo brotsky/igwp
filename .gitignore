@@ -29,3 +29,4 @@ node_modules
 *.map
 js/theme.min.js
 js/theme.min.js.map
+style.css.map
