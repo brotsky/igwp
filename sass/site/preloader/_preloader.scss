@@ -20,6 +20,10 @@
         display: block;
       }
 
+      .hide {
+        display: none;
+      }
+
       .infinite, .manufacturing, .group, {
         fill: $color__white;
       }

@@ -133,6 +133,7 @@ function infinite_group_scripts() {
 	wp_enqueue_script( 'bootstrap', '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js' );
 
 	wp_enqueue_script( 'TweenMax','//cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js' );
+	wp_enqueue_script( 'MorphSVGPlugin', get_template_directory_uri() . '/js/greensock-js-shockingly-green/src/minified/plugins/MorphSVGPlugin.min.js', array(), '20151215', true );
 
 	wp_enqueue_style( 'infinite_group-style', get_stylesheet_uri() );
 
