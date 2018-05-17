@@ -1,3 +1,11 @@
+function handle_fold_changes(){
+  var section_name = $.scrollify.current().data('section-name');
+  $('#fold-navigation li').removeClass('active');
+  $('#fold-navigation li[data-section-name="'+section_name+'"]').addClass('active');
+  $('.main-navigation li').removeClass('current_page_item').removeClass('current-menu-item');
+  $('.main-navigation li.'+section_name).addClass('current_page_item').addClass('current-menu-item');
+}
+
 $(document).ready(function() {
   new Glide('.glide').mount();
 
@@ -160,11 +168,7 @@ $(document).ready(function() {
     updateHash: true,
     touchScroll:true,
     before:function(index, sections){
-      var section_name = $.scrollify.current().data('section-name');
-      $('#fold-navigation li').removeClass('active');
-      $('#fold-navigation li[data-section-name="'+section_name+'"]').addClass('active');
-      $('.main-navigation li').removeClass('current_page_item').removeClass('current-menu-item');
-      $('.main-navigation li.'+section_name).addClass('current_page_item').addClass('current-menu-item');
+      handle_fold_changes();
     },
     after:function() {},
     afterResize:function() {},
@@ -177,11 +181,7 @@ $(document).ready(function() {
   });
 
   if($.scrollify.current()){
-    var section_name = $.scrollify.current().data('section-name');
-    $('#fold-navigation li').removeClass('active');
-    $('#fold-navigation li[data-section-name="'+section_name+'"]').addClass('active');
-    $('.main-navigation li').removeClass('current_page_item').removeClass('current-menu-item');
-    $('.main-navigation li.'+section_name).addClass('current_page_item').addClass('current-menu-item');
+    handle_fold_changes();
   }
 
   $('body.home .main-navigation a').click(function(e){
