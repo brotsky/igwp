@@ -8,6 +8,19 @@ function handle_fold_changes(){
 
 $(document).ready(function() {
   new Glide('.glide').mount();
+  new Glide('.glide.glide-about-us', {
+    type: 'carousel',
+    perView: 1,
+    focusAt: 'center',
+    breakpoints: {
+      800: {
+        perView: 1
+      },
+      480: {
+        perView: 1
+      }
+    }
+  }).mount();
 
   var preloader = $('#preloader'),
       preloaderSvg = $('#preloader-svg');
