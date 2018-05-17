@@ -34,19 +34,37 @@
     width: 40%;
     padding-right: 10%;
     float: left;
+
+    .left_border{
+      padding-left: 15px;
+      border-left: 2px solid $color__light-brown;
+    }
+
+    .highlighted p{
+      color: $color__light-brown;
+    }
   }
 
   .about-us-right{
     width: 50%;
     float: right;
+
+    .social-icon-wrapper{
+      text-align: right;
+      margin: 20px 0 0;
+
+      a{
+        font-size: 1.4em;
+        color: $color__light-brown;
+        display: inline-block;
+        margin-left: 10px;
+
+        &:hover{
+          color: $color__brown;
+        }
+      }
+    }
   }
 
-  .left_border{
-    padding-left: 15px;
-    border-left: 2px solid $color__light-brown;
-  }
 
-  .highlighted p{
-    color: $color__light-brown;
-  }
 }
