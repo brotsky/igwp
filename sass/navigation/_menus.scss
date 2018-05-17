@@ -43,8 +43,7 @@
 		float: left;
 		position: relative;
 
-		&:hover > a,
-		&.focus > a {
+		&:hover > a{
 			color: $color__light-brown;
 			
 			&:after {

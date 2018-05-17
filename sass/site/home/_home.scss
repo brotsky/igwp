@@ -6,9 +6,15 @@
   top: 50%;
   margin: 0;
   list-style: none;
+  text-align: center;
 
   li {
     cursor: pointer;
     color: $color__light-brown;
+
+    &.active {
+    	font-size: 1.8em;
+    	color: $color__brown;
+    }
   }
 }
