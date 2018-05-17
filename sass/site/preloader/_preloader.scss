@@ -4,24 +4,60 @@
   background: $color__brown;
   color: $color__white;
 
-  svg {
-    .infinite, .manufacturing, .group, {
-      fill: $color__white;
+  .container {
+
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    max-width: 100vw;
+
+    svg {
+
+      display: none;
+
+      &.show {
+        display: block;
+      }
+
+      .hide {
+        display: none;
+      }
+
+      .infinite, .manufacturing, .group {
+        fill: $color__white;
+      }
+
+      #icon {
+        .red {
+          fill: $color__red;
+        }
+        .orange {
+          fill: $color__orange;
+        }
+        .red-orange {
+          fill: $color__red-orange;
+        }
+        .purple {
+          fill: $color__purple;
+        }
+      }
+
+      #blueprints {
+        .transparent-white {
+          opacity:0.5;
+          fill: $color__white;
+          stroke: $color__white;
+          stroke-miterlimit:10;
+        }
+      }
+      
+      #infinite {
+        .infinite {
+          opacity: 0;
+        }
+      }
     }
 
-    #icon {
-      .red {
-        fill: $color__red;
-      }
-      .orange {
-        fill: $color__orange;
-      }
-      .red-orange {
-        fill: $color__red-orange;
-      }
-      .purple {
-        fill: $color__purple;
-      }
-    }
   }
 }
