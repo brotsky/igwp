@@ -27,3 +27,5 @@ gen
 node_modules
 /package-lock.json
 *.map
+js/theme.min.js
+js/theme.min.js.map
