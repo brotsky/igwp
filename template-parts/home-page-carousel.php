@@ -10,7 +10,12 @@
             ?>
             <li class="glide__slide">
               <div class="slide-background" style="background-image: url(<?php echo $backgroundUrl; ?>)">
-              
+              <div class="slide-content">
+                <div class="title-top"><?php echo $slide['title_top']; ?></div>
+                <div class="title-bottom"><?php echo $slide['title_bottom']; ?></div>
+                <div class="description"><?php echo $slide['description']; ?></div>
+                <button data-section-name="about-us">Learn More</button>
+              </div>
               </div>
             </li>
           <?php } ?>

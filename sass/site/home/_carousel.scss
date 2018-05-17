@@ -14,6 +14,28 @@
         background-position: right;
         width: 100vw;
         height: 100vh;
+
+        .slide-content{
+          position: relative;
+          top: 200px;
+          left: 150px;
+          max-width: calc(50% - 250px);
+
+          .title-top{
+            font-size: 2.8em;
+            color: $color__brown;
+          }
+
+          .title-bottom{
+            font-size: 3.5em;
+            color: $color__brown;
+          }
+
+          .description{
+            font-size: 0.8em;
+            margin: 20px 0;
+          }
+        }
       }
     }
   }
