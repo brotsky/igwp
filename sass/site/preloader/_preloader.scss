@@ -24,7 +24,7 @@
         display: none;
       }
 
-      .infinite, .manufacturing, .group, {
+      .infinite, .manufacturing, .group {
         fill: $color__white;
       }
 
@@ -40,6 +40,21 @@
         }
         .purple {
           fill: $color__purple;
+        }
+      }
+
+      #blueprints {
+        .transparent-white {
+          opacity:0.5;
+          fill: $color__white;
+          stroke: $color__white;
+          stroke-miterlimit:10;
+        }
+      }
+      
+      #infinite {
+        .infinite {
+          opacity: 0;
         }
       }
     }

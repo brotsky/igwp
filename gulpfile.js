@@ -29,7 +29,7 @@ gulp.task('js', function () {
     ])
         .pipe(plumber())
         .pipe(jshint())
-        .pipe(jshint.reporter('fail'))
+        .pipe(jshint.reporter('default'))
         .pipe(sourcemaps.init())
         .pipe(concat('theme.min.js'))
         .pipe(uglify())

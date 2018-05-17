@@ -26,10 +26,22 @@ $(document).ready(function() {
         ],
         lineDelayOffset = 1.5,
         delayVariable = 0.3,
+        blueprintDelayVariable = 0.05,
         colors = [
           'red-orange',
           'red',
           'orange'
+        ],
+        blueprintLines = $('#blueprints line'),
+        infiniteLetters = [
+          'i1',
+          'n1',
+          'f',
+          'i2',
+          'n2',
+          'i3',
+          't',
+          'e',
         ];
     $(preloaderSvg).attr('width', containerWidth + 'px');
     $(preloaderSvg).attr('height', containerHeight + 'px');
@@ -65,23 +77,73 @@ $(document).ready(function() {
       delay: delayVariable * 4 + 1,
     });
     
-    for(var c = 0 ; c < colors.length ; c+=1)
-      for(var i = 0 ; i < 4; i++) {
+    for(var c = 0 ; c < colors.length ; c+=1) {
+      for(var j = 0 ; j < 4; j++) {
         TweenMax.to(
-          "#icon-" + colors[c] + "-dot-" + (i + 1),
+          "#icon-" + colors[c] + "-dot-" + (j + 1),
           3,
           {
-            morphSVG:"#icon-" + colors[c] + "-" + (i + 1),
+            morphSVG:"#icon-" + colors[c] + "-" + (j + 1),
             ease: Elastic.easeOut,
-            delay: i * delayVariable + lineDelayOffset
+            delay: j * delayVariable + lineDelayOffset
           }
         );
       }
+    }
 
-    TweenMax.to(preloader, 0.5, {opacity: 0, delay: 6, onComplete: function() {
+    for(var h = 0 ; h < blueprintLines.length ; h+=1) {
+      TweenMax.set(
+        blueprintLines[h],
+        {
+          drawSVG: '0% 0%'
+        }
+      );
+      TweenMax.to(
+        blueprintLines[h],
+        0.5,
+        {
+          drawSVG: '0% 100%',
+          delay: h * blueprintDelayVariable + lineDelayOffset
+        }
+      );
+      TweenMax.to(
+        blueprintLines[h],
+        0.5,
+        {
+          drawSVG: '100% 100%',
+          delay: h * blueprintDelayVariable + lineDelayOffset + 2.5
+        }
+      );
+    }
+
+    for(var k = 0 ; k < infiniteLetters.length ; k++) {
+      TweenMax.set('#infinite-' + infiniteLetters[k], { opacity: 0 });
+      TweenMax.to('#infinite-' + infiniteLetters[k], 1, { opacity: 1, delay: k * 0.4 + 2.5 });
+    }
+
+    TweenMax.to(
+      blueprintLines[0],
+      3,
+      {
+        drawSVG: '100% 100%',
+        delay: 5.25
+      }
+    );
+    TweenMax.to(
+      blueprintLines[1],
+      3,
+      {
+        drawSVG: '100% 100%',
+        delay: 6.25
+      }
+    );
+
+    TweenMax.set(['#manufacturing', '#group'], { opacity: 0 });
+      TweenMax.to(['#manufacturing', '#group'], 2, { opacity: 1, delay: 4 });
+
+    TweenMax.to(preloader, 0.5, {opacity: 0, delay: 8, onComplete: function() {
       $(preloader).remove();
     }});
-
   }
 
   $.scrollify({
