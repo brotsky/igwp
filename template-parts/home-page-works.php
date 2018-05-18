@@ -28,7 +28,7 @@
 
               <div class="fold-col <?php echo $col ?> d-flex align-content-stretch flex-wrap">
                 <?php if($captionLocation === 'top') { ?>
-                  <div class="row text-content-row brown-background">
+                  <div class="row text-content-row <?php echo $featured_work['background_color']; ?>-background">
                     <div class="col-sm-8 offset-sm-2">
                       <?php echo $work->content; ?>
                     </div>
@@ -47,7 +47,7 @@
                 ?>
 
                 <?php if($captionLocation === 'bottom') { ?>
-                  <div class="row text-content-row brown-background">
+                  <div class="row text-content-row <?php echo $featured_work['background_color']; ?>-background">
                     <div class="col-sm-8 offset-sm-2">
                       <?php echo $work->content; ?>
                     </div>
