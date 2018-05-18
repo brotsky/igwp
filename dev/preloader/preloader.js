@@ -22,7 +22,7 @@ $(document).ready(function() {
           ['#icon-orange-dot-3', '#icon-red-dot-3', '#icon-red-orange-dot-3'],
           ['#icon-orange-dot-4', '#icon-red-dot-4', '#icon-red-orange-dot-4'],
         ],
-        lineDelayOffset = 1.5,
+        lineDelayOffset = 1.1,
         delayVariable = 0.3,
         blueprintDelayVariable = 0.05,
         colors = [
@@ -72,7 +72,7 @@ $(document).ready(function() {
     TweenMax.to('#icon-dot', 1, {
       y: 0,
       ease: Bounce.easeOut,
-      delay: delayVariable * 4 + 1,
+      delay: delayVariable * 2 + 1,
     });
     
     for(var c = 0 ; c < colors.length ; c+=1) {
@@ -106,7 +106,7 @@ $(document).ready(function() {
       );
       TweenMax.to(
         blueprintLines[h],
-        0.5,
+        1,
         {
           drawSVG: '100% 100%',
           delay: h * blueprintDelayVariable + lineDelayOffset + 2.5
@@ -115,8 +115,24 @@ $(document).ready(function() {
     }
 
     for(var k = 0 ; k < infiniteLetters.length ; k++) {
-      TweenMax.set('#infinite-' + infiniteLetters[k], { opacity: 0 });
-      TweenMax.to('#infinite-' + infiniteLetters[k], 1, { opacity: 1, delay: k * 0.4 + 2.5 });
+      TweenMax.set(
+        '#infinite-' + infiniteLetters[k],
+        {
+          opacity: 0,
+          x: -3.5,
+          y: 2
+        }
+      );
+      TweenMax.to(
+        '#infinite-' + infiniteLetters[k],
+        1,
+        {
+          opacity: 1,
+          x: 0,
+          y: 0,
+          delay: k * 0.4 + 2.5
+        }
+      );
     }
 
     TweenMax.to(
@@ -136,10 +152,26 @@ $(document).ready(function() {
       }
     );
 
-    TweenMax.set(['#manufacturing', '#group'], { opacity: 0 });
-      TweenMax.to(['#manufacturing', '#group'], 2, { opacity: 1, delay: 4 });
+    TweenMax.set(
+      ['#manufacturing', '#group'],
+      {
+        opacity: 0,
+        x: -3.5,
+        y: 2
+      }
+    );
+    TweenMax.to(
+      ['#manufacturing', '#group'],
+      2,
+      {
+        opacity: 1,
+        x: 0,
+        y: 0,
+        delay: 4
+      }
+    );
 
-    TweenMax.to(preloader, 0.5, {opacity: 0, delay: 8, onComplete: function() {
+    TweenMax.to(preloader, 0.6, {opacity: 0, delay: 8.25, onComplete: function() {
       $(preloader).remove();
     }});
   }

@@ -1,4 +1,5 @@
 function handle_fold_changes(){
+  $('#home-works .text-content-row').attr('style', '');
   var section_name = $.scrollify.current().data('section-name');
   $('#fold-navigation li').removeClass('active');
   $('#fold-navigation li[data-section-name="'+section_name+'"]').addClass('active');
