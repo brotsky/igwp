@@ -10,7 +10,7 @@
             ?>
             <li class="glide__slide">
               <div class="slide-background" style="background-image: url(<?php echo $backgroundUrl; ?>)">
-              <div class="slide-content">
+              <div class="slide-content col-sm-4 offset-sm-1">
                 <div class="title-top"><?php echo $slide['title_top']; ?></div>
                 <div class="title-bottom"><?php echo $slide['title_bottom']; ?></div>
                 <div class="description"><?php echo $slide['description']; ?></div>

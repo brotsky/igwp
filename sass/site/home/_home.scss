@@ -25,16 +25,10 @@
 .about-us-wrapper{
   position: relative;
   top: 200px;
-  max-width: 1000px;
-  padding: 0 150px;
+  max-width: 1100px;
   margin: 0 auto 0;
-  box-sizing: content-box;
-  overflow: hidden;
 
   .about-us-left{
-    width: 40%;
-    padding-right: 10%;
-    float: left;
 
     blockquote{
       margin-left: 0;
@@ -48,8 +42,6 @@
   }
 
   .about-us-right{
-    width: 50%;
-    float: right;
 
     .social-icon-wrapper{
       text-align: right;

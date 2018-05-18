@@ -1,14 +1,14 @@
-<section class="fold" id="home-about" data-section-name="about-us">
-	<div class="about-us-wrapper">
+<section class="fold container-fluid" id="home-about" data-section-name="about-us">
+	<div class="about-us-wrapper row">
 		
-		<div class="about-us-left">
+		<div class="about-us-left col-sm-5">
 			<h3>About Us</h3>
 			<div class="about-us-content">
 				<?php the_field( 'content' ); ?>
 			</div>
 		</div>
 
-		<div class="about-us-right">
+		<div class="about-us-right col-sm-7">
 			<?php if ( have_rows( 'about_us_slider' ) ) : ?>
 				<div class="glide-about-us glide">
 					<div data-glide-el="track" class="glide__track">
