@@ -1,0 +1,55 @@
+.infinite-button-wrapper {
+
+  position: relative;
+  display: inline-block;
+
+  .infinite-button {
+    color: $color__light-brown;
+    border-radius: 0;
+    background-color: $color__white;
+    border: 0;
+    position: relative;
+    z-index: 2;
+    box-shadow: 1px 1px 10px $color__grey;
+    transition-duration: 300ms;
+
+    &.hvr-sweep-to-top {
+      &:before {
+        background: $color__light-brown;
+      }
+    }
+  }
+
+  .infinite-button-border {
+    border: 2px solid $color__light-brown;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 10px;
+    left: 10px;
+    transition-duration: 300ms; 
+  }
+
+  &.hover {
+
+    .infinite-button {
+      background-color: $color__light-brown;
+      color: $color__white;
+      box-shadow: 1px 1px 10px $color__grey;
+    }
+
+    .infinite-button-border {
+      top: 0;
+      left: 0;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

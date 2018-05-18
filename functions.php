@@ -183,6 +183,12 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/custom-post-types/custom-post-types.php';
 
 /**
+ * Shortcodes
+ */
+require get_template_directory() . '/inc/shortcodes/shortcodes.php';
+
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

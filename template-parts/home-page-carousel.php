@@ -14,7 +14,13 @@
                 <div class="title-top"><?php echo $slide['title_top']; ?></div>
                 <div class="title-bottom"><?php echo $slide['title_bottom']; ?></div>
                 <div class="description"><?php echo $slide['description']; ?></div>
-                <button data-section-name="about-us">Learn More</button>
+                <?php echo do_shortcode(
+                  "
+                  [infinite_button section-name='about-us']
+                    Learn More
+                  [/infinite_button]
+                  "
+                  ); ?>
               </div>
               </div>
             </li>
