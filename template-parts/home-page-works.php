@@ -39,7 +39,13 @@
                   ?>
                   <div class="row image-content-row">
                     <div class="image-container">
-                      <img src="<?php echo $imageUrl; ?>" alt="" />
+                      <a href="#" class="hvr-sweep-to-top">
+                        <img src="<?php echo $imageUrl; ?>" alt="" />
+                        <div class="hover-detail">
+                          <h4>View Gallery</h4>
+                          <i class="fas fa-eye"></i>
+                        </div>
+                      </a>
                     </div>
                   </div>
                   <?php

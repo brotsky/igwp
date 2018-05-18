@@ -11,6 +11,42 @@
 
       .fold-col {
         padding: 0;
+
+        .image-container{
+          a{
+            position: relative;
+            display: block;
+            text-align: center;
+            
+            &.hvr-sweep-to-top:before{
+              background-color: rgba(0,0,0,.4);
+              z-index: 2;
+            }
+
+            &:hover{
+              .hover-detail{
+                display: block;
+              }
+            }
+
+            .hover-detail{
+              display: none;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 35%;
+              color: $color__white;
+              z-index: 3;
+
+              i{
+                font-size: 3em;
+              }
+
+            }
+
+          }
+        }
+
       }
 
     }
