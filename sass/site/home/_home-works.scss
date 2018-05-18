@@ -1,9 +1,10 @@
 #home-works {
-  padding-top: 100px;
   padding-right: 150px;
 
   > .container-fluid {
-    height: 100%;
+    position: relative;
+    top: 100px;
+    height: calc(100% - 100px);
 
     > .row {
       height: 100%;
@@ -19,6 +20,9 @@
 
 .admin-bar {
   #home-works {
-    padding-top: 132px;
+    > .container-fluid {
+      top: 132px;
+      height: calc(100% - 132px);
+    }
   }
 }
