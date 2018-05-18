@@ -4,10 +4,10 @@
         "title": "Home Page About",
         "fields": [
             {
-                "key": "field_5afd8e37a925f",
-                "label": "Paragraph",
-                "name": "paragraph",
-                "type": "repeater",
+                "key": "field_5afee81c099f6",
+                "label": "Content",
+                "name": "content",
+                "type": "wysiwyg",
                 "instructions": "",
                 "required": 0,
                 "conditional_logic": 0,
@@ -16,58 +16,11 @@
                     "class": "",
                     "id": ""
                 },
-                "collapsed": "",
-                "min": 0,
-                "max": 0,
-                "layout": "table",
-                "button_label": "Add Paragraph",
-                "sub_fields": [
-                    {
-                        "key": "field_5afd8e7fa9260",
-                        "label": "Content",
-                        "name": "content",
-                        "type": "textarea",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "default_value": "",
-                        "placeholder": "",
-                        "maxlength": "",
-                        "rows": "",
-                        "new_lines": "wpautop"
-                    },
-                    {
-                        "key": "field_5afd8eada9261",
-                        "label": "Type",
-                        "name": "type",
-                        "type": "select",
-                        "instructions": "",
-                        "required": 0,
-                        "conditional_logic": 0,
-                        "wrapper": {
-                            "width": "",
-                            "class": "",
-                            "id": ""
-                        },
-                        "choices": {
-                            "default": "Default",
-                            "left_border": "Left Border",
-                            "highlighted": "Highlighted"
-                        },
-                        "default_value": [],
-                        "allow_null": 0,
-                        "multiple": 0,
-                        "ui": 0,
-                        "ajax": 0,
-                        "return_format": "value",
-                        "placeholder": ""
-                    }
-                ]
+                "default_value": "",
+                "tabs": "all",
+                "toolbar": "full",
+                "media_upload": 1,
+                "delay": 0
             },
             {
                 "key": "field_5afd91385529e",
