@@ -1,0 +1,60 @@
+@media screen and (max-width: 767px){
+
+	header#masthead{
+		background-color: $color__brown;
+	}
+
+	.main-navigation{
+		float: right;
+
+		.menu-toggle{
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 70px;
+			height: 100px;
+			background-color: transparent;
+			border: none;
+			padding: 20px;
+
+			&:focus{
+				outline: 0px;
+			}
+
+			.mobile-menu-bar{
+				width: 30px;
+				height: 2px;
+				margin-bottom: 4px;
+				background-color: $color__light_brown;
+			}
+		}
+
+		&.toggled{
+
+			.menu-main-container{
+				width: 100%;
+				clear: both;
+				left: 0;
+				position: fixed;
+				right: 0;
+				top: 100px;
+				bottom: 0;
+				background: $color__brown;
+				z-index: 5;
+
+				li{
+					float: none;
+					margin: 0 !important;
+					text-align: center;
+
+					a:after{
+						content: none;
+					}
+				}
+			}
+
+		}
+
+	}
+
+}
