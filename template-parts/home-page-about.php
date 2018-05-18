@@ -3,13 +3,9 @@
 		
 		<div class="about-us-left">
 			<h3>About Us</h3>
-			<?php if ( have_rows( 'paragraph' ) ) : ?>
-				<?php while ( have_rows( 'paragraph' ) ) : the_row(); ?>
-					<div class="<?php echo get_sub_field( 'type' ); ?>">
-						<?php echo get_sub_field( 'content' ); ?>
-					</div>
-				<?php endwhile; ?>
-			<?php endif; ?>
+			<div class="about-us-content">
+				<?php the_field( 'content' ); ?>
+			</div>
 		</div>
 
 		<div class="about-us-right">
