@@ -57,6 +57,17 @@
           opacity: 0;
         }
       }
+
+      #sketches {
+        .sketch {
+          opacity:0.75;
+          stroke: $color__white;
+          fill: none;
+          stroke-linecap:square;
+          stroke-linejoin:round;
+          stroke-miterlimit:10;
+        }
+      }
     }
 
   }

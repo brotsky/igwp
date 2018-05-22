@@ -25,12 +25,14 @@ $(document).ready(function() {
         lineDelayOffset = 1.1,
         delayVariable = 0.3,
         blueprintDelayVariable = 0.05,
+        sketchDelayVariable = 0.25,
         colors = [
           'red-orange',
           'red',
           'orange'
         ],
         blueprintLines = $('#blueprints line'),
+        sketchLines = $('#sketches polyline'),
         infiniteLetters = [
           'i1',
           'n1',
@@ -110,6 +112,31 @@ $(document).ready(function() {
         {
           drawSVG: '100% 100%',
           delay: h * blueprintDelayVariable + lineDelayOffset + 2.5
+        }
+      );
+    }
+
+    for(var s = 0 ; s < sketchLines.length ; s+=1) {
+      TweenMax.set(
+        sketchLines[s],
+        {
+          drawSVG: '0% 0%'
+        }
+      );
+      TweenMax.to(
+        sketchLines[s],
+        0.5,
+        {
+          drawSVG: '0% 100%',
+          delay: s * sketchDelayVariable + lineDelayOffset + 1
+        }
+      );
+      TweenMax.to(
+        sketchLines[s],
+        1.75,
+        {
+          drawSVG: '100% 100%',
+          delay: s * sketchDelayVariable + lineDelayOffset + 2.5 + 1
         }
       );
     }

@@ -17,10 +17,25 @@
             position: relative;
             display: block;
             text-align: center;
+
+            &.teal {
+              background-color: $color__transparent_teal;
+            }
+
+            &.pink {
+              background-color: $color__transparent_pink;
+            }
+
+            &.sky-blue {
+              background-color: $color__transparent_sky_blue;
+            }
             
             &.hvr-sweep-to-top:before{
-              background-color: rgba(0,0,0,.4);
+              
               z-index: 2;
+
+              
+
             }
 
             &:hover{
