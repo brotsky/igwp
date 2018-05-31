@@ -369,11 +369,10 @@ $(document).ready(function() {
         delay: startNewLogoAnimation + 4
       }
     );
-/*
+
     TweenMax.to(preloader, 0.6, {opacity: 0, delay: 8.25, onComplete: function() {
       $(preloader).remove();
     }});
-
-    */
+    
   }
 });
