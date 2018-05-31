@@ -24,6 +24,10 @@
         display: none;
       }
 
+      .path {
+        opacity: 0;
+      }
+
       .infinite, .manufacturing, .group {
         fill: $color__white;
       }
@@ -67,6 +71,48 @@
           stroke-linejoin:round;
           stroke-miterlimit:10;
         }
+      }
+
+      #old-logo {
+
+        .brown-outline {
+          fill-rule:evenodd;
+          clip-rule:evenodd;
+          fill:none;
+          stroke: $color__brown;
+          stroke-width:13;
+          stroke-miterlimit:10;
+        }
+
+        .bright-red {
+          fill: $color__bright-red;
+          fill-rule:evenodd;clip-rule:evenodd;
+        }
+
+        .infinity-line {
+          fill-rule:evenodd;
+          clip-rule:evenodd;
+          fill:none;
+          stroke: $color__light-grey;
+          stroke-width:10;
+          stroke-miterlimit:10;
+
+          &.dark-grey {
+            stroke: $color__dark-grey;
+          }
+        }
+
+        .eraser {
+          fill: none;
+          stroke: $color__black;
+          stroke-width: 20;
+          stroke-miterlimit: 0;
+
+          &.transparent {
+            opacity: 0.5;
+          }
+        }
+
       }
     }
 
