@@ -55,7 +55,7 @@ $(document).ready(function() {
     });
   });
 
-  $('*[data-section-name]').click(function(e){
+  $('*[data-section-name]:not(.fold)').click(function(e){
     e.preventDefault();
     var $id = $(this).data('section-name');
     $.scrollify.move('#'+$id);
