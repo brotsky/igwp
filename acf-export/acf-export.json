@@ -418,6 +418,31 @@
                         "prepend": "",
                         "append": "",
                         "maxlength": ""
+                    },
+                    {
+                        "key": "field_5b15acaa7cd9f",
+                        "label": "Width",
+                        "name": "width",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "full": "Full",
+                            "half": "Half"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
                     }
                 ]
             },
@@ -626,75 +651,6 @@
                                 "max_height": "",
                                 "max_size": "",
                                 "mime_types": ""
-                            }
-                        ],
-                        "min": "",
-                        "max": ""
-                    },
-                    "5b119062fa5a6": {
-                        "key": "5b119062fa5a6",
-                        "name": "work_overview",
-                        "label": "Work Overview",
-                        "display": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_5b119079fa5a7",
-                                "label": "Meta Field",
-                                "name": "meta_field",
-                                "type": "repeater",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "collapsed": "",
-                                "min": 0,
-                                "max": 0,
-                                "layout": "table",
-                                "button_label": "",
-                                "sub_fields": [
-                                    {
-                                        "key": "field_5b11909ffa5a8",
-                                        "label": "Label",
-                                        "name": "label",
-                                        "type": "text",
-                                        "instructions": "",
-                                        "required": 1,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        },
-                                        "default_value": "",
-                                        "placeholder": "",
-                                        "prepend": "",
-                                        "append": "",
-                                        "maxlength": ""
-                                    },
-                                    {
-                                        "key": "field_5b1190a9fa5a9",
-                                        "label": "Value",
-                                        "name": "value",
-                                        "type": "text",
-                                        "instructions": "",
-                                        "required": 1,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        },
-                                        "default_value": "",
-                                        "placeholder": "",
-                                        "prepend": "",
-                                        "append": "",
-                                        "maxlength": ""
-                                    }
-                                ]
                             }
                         ],
                         "min": "",
