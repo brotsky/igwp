@@ -1,6 +1,15 @@
 .single-work{
 	background-color: #F8F8F8;
 
+	.entry-header{
+		h1{
+			padding: 0 12.5rem 0 15rem;
+			padding-top: 24vh;
+			height: 100%;
+			margin: 0;
+		}
+	}
+
 	.work_layout_box{
 		padding-top: 100px;
 		padding-bottom: 100px;
@@ -195,8 +204,22 @@
 			}
 		}
 	}
+
+	.gallery_listing_box{
+		padding-top: 150px;
+		padding-bottom: 50px;
+
+		.gallery_image_col{
+			margin-bottom: 30px;
+		}
+	}
 }
 
 .no-flex, .no-flex .row{
 	display: block;
+}
+
+.no_side_padding{
+	padding-left: 0 !important;
+	padding-right: 0 !important;
 }

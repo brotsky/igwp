@@ -10,11 +10,17 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
-	</header><!-- .entry-header -->
+	<div class="container-fluid">
+		<header class="row entry-header">
+			<div class="col-sm-6 no_side_padding">
+				<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
+			</div>
 
-	<?php infinite_group_post_thumbnail(); ?>
+			<div class="col-sm-6 no_side_padding">
+				<?php infinite_group_post_thumbnail(); ?>
+			</div>
+		</header><!-- .entry-header -->
+	</div>
 
 	<div class="entry-content">
 		<?php if ( have_rows( 'content' ) ): ?>
@@ -70,24 +76,28 @@
 								<img src="<?php echo $full_width_image['url']; ?>" alt="<?php echo $full_width_image['alt']; ?>" />
 							<?php } ?>
 
-						<?php elseif ( get_row_layout() == 'work_overview' ) : ?>
-
-							<?php if ( have_rows( 'meta_field' ) ) : ?>
-								<div class="work_meta_box row col-sm-12">
-									<?php while ( have_rows( 'meta_field' ) ) : the_row(); ?>
-										<div class="work_meta text-center col-sm-4">
-											<div class="">
-												<div class="meta_label"><?php the_sub_field( 'label' ); ?></div>
-												<div class="meta_value"><?php the_sub_field( 'value' ); ?></div>
-											</div>
-										</div>
-									<?php endwhile; ?>
-								</div>
-							<?php endif; ?>
 						<?php endif; ?>
 					</div><!-- .row -->
 				</div><!-- .container/.container-fluid -->
 			<?php endwhile; ?>
+		<?php endif; ?>
+
+		<?php if ( have_rows( 'gallery' ) ) : ?>
+			<div class="container gallery_listing_box">
+				<div class="row">
+					<?php
+					while ( have_rows( 'gallery' ) ) : the_row();
+						$wrapper_class = (get_sub_field( 'width' ) == 'full') ? 'col-sm-12' : 'col-sm-6';
+
+						$image = get_sub_field( 'image' );
+						if ( $image ) { ?>
+							<div class="<?php echo $wrapper_class; ?> gallery_image_col">
+								<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+							</div>
+						<?php }
+					endwhile; ?>
+				</div>
+			</div>
 		<?php endif; ?>
 
 		<?php
