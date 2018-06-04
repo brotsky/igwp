@@ -1,0 +1,21 @@
+@font-face {
+    font-family: 'WhitneyCondensed Book';
+    src: url('fonts/WhitneyCondensed-Book.eot');
+    src: url('fonts/WhitneyCondensed-Book.eot?#iefix') format('embedded-opentype'),
+        url('fonts/WhitneyCondensed-Book.woff2') format('woff2'),
+        url('fonts/WhitneyCondensed-Book.woff') format('woff'),
+        url('fonts/WhitneyCondensed-Book.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Whitney';
+    src: url('fonts/Whitney-Light.eot');
+    src: url('fonts/Whitney-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Whitney-Light.woff2') format('woff2'),
+        url('fonts/Whitney-Light.woff') format('woff'),
+        url('fonts/Whitney-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}

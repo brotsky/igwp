@@ -1,4 +1,5 @@
 .single-work{
+	background-color: #F8F8F8;
 
 	.work_layout_box{
 		padding-top: 100px;
@@ -7,6 +8,7 @@
 		.work_layout{
 			padding-top: 50px;
 			padding-bottom: 50px;
+			overflow: hidden;
 
 			.image-wrap{
 				overflow: hidden;
@@ -58,6 +60,26 @@
 					-webkit-transform: translateY(100%);
 					-ms-transform: translateY(100%);
 					transform: translateY(100%);
+				}
+			}
+
+			&:nth-child(2n+1){
+				.col-sm-7{
+					float: left;
+				}
+				.col-sm-5{
+					float: right;
+					margin-top: 20px;
+				}
+			}
+
+			&:nth-child(2n){
+				.col-sm-7{
+					float: right;
+				}
+				.col-sm-5{
+					float: left;
+					margin-top: 20px;
 				}
 			}
 		}

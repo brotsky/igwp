@@ -11,7 +11,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
 	<?php infinite_group_post_thumbnail(); ?>
@@ -49,7 +49,7 @@
 							<?php if ( have_rows( 'layout_wrapper' ) ) : ?>
 								<div class="work_layout_box col-sm-12">
 									<?php while ( have_rows( 'layout_wrapper' ) ) : the_row(); ?>
-										<div class="work_layout row">
+										<div class="work_layout row no-flex">
 											<div class="col-sm-7 image-wrap">
 												<?php $image = get_sub_field( 'image' ); ?>
 												<?php if ( $image ) { ?>
