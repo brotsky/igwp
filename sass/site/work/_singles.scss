@@ -1,0 +1,180 @@
+.single-work{
+
+	.work_layout_box{
+		padding-top: 100px;
+		padding-bottom: 100px;
+
+		.work_layout{
+			padding-top: 50px;
+			padding-bottom: 50px;
+
+			.image-wrap{
+				overflow: hidden;
+
+				&::before {
+					-webkit-transform-origin: center top;
+					-ms-transform-origin: center top;
+					transform-origin: center top;
+				}
+				&.animate-block::before {
+					-webkit-transform: scaleY(1);
+					-ms-transform: scaleY(1);
+					transform: scaleY(1);
+				}
+				&::before {
+					content: "";
+					position: absolute;
+					top: 0;
+					right: 15px;
+					bottom: 0;
+					left: 15px;
+					background-color: #f0f0eb;
+					-webkit-transform: scaleY(0);
+					-ms-transform: scaleY(0);
+					transform: scaleY(0);
+					-webkit-transition: -webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: -webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: transform .6s cubic-bezier(0.4,0,.2,1),-webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					-webkit-transform-origin: center bottom;
+					-ms-transform-origin: center bottom;
+					transform-origin: center bottom;
+				}
+
+				&.animate-block img {
+					-webkit-transform: translateY(0) !important;
+					-ms-transform: translateY(0) !important;
+					transform: translateY(0) !important;
+					-webkit-transition-delay: .6s;
+					transition-delay: .6s;
+				}
+
+				img {
+					width: 100%;
+					-webkit-transition: -webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: -webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: transform .6s cubic-bezier(0.4,0,.2,1);
+					transition: transform .6s cubic-bezier(0.4,0,.2,1),-webkit-transform .6s cubic-bezier(0.4,0,.2,1);
+					-webkit-transform: translateY(100%);
+					-ms-transform: translateY(100%);
+					transform: translateY(100%);
+				}
+			}
+		}
+	}
+
+	.work_specification{
+		padding-top: 50px;
+
+		// Loops to enumerate the classes for gallery columns.
+		@for $i from 0 through 9 {
+			.specs_li:nth-child(#{$i}) {
+				.specs_value::before{
+					-webkit-transition-delay: $i * 0.10 + s;
+					transition-delay: $i * 0.10 + s;
+				}
+
+				.specs_value::after{
+					-webkit-transition-delay: $i * 0.20 + s !important;
+					transition-delay: $i * 0.20 + s !important;
+				}
+			}
+		}
+
+		&.animate-block .specs_value::before, &.animate-block .specs_li:last-child .specs_value::after {
+			-webkit-transform: scaleX(1);
+			-ms-transform: scaleX(1);
+			transform: scaleX(1);
+		}
+
+		.specs_value::before, .specs_li:last-child .specs_value::after {
+			content: "";
+			position: absolute;
+			top: -1px;
+			right: 0;
+			left: 0;
+			border-top: 2px solid #545454;
+			-webkit-transform: scaleX(0);
+			-ms-transform: scaleX(0);
+			transform: scaleX(0);
+			-webkit-transform-origin: center left;
+			-ms-transform-origin: center left;
+			transform-origin: center left;
+			-webkit-transition: -webkit-transform .45s cubic-bezier(0.4,0,.2,1);
+			transition: -webkit-transform .45s cubic-bezier(0.4,0,.2,1);
+			transition: transform .45s cubic-bezier(0.4,0,.2,1);
+			transition: transform .45s cubic-bezier(0.4,0,.2,1),-webkit-transform .45s cubic-bezier(0.4,0,.2,1);
+		}
+
+		.specs_li:last-child{
+
+			.specs_value::after {
+				bottom: -1px;
+				top: unset;
+			}
+
+			.specs_label{
+				border-bottom: 1px solid #545454;
+			}
+		}
+
+		ul{
+			padding: 0;
+			margin: 0;
+			list-style-type: none;
+			font-size: 12px;
+
+			.specs_li{
+				line-height: 2.5rem;
+
+				.specs_label{
+					display: inline-block;
+					width: 20%;
+					margin-right: 5%;
+					border-top: 1px solid #545454;
+				}
+
+				.specs_value{
+					position: relative;
+					display: inline-block;
+					width: 60%;
+				}
+			}
+		}
+
+		.what_we_did_box{
+			p.label{
+				font-size: 12px;
+				color: $color__grey;
+				margin-bottom: 20px;
+			}
+
+			li{
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.fluid_width_layout{
+		img{
+			width: 100%;
+		}
+	}
+
+	.work_meta_box{
+		padding-top: 50px;
+		padding-bottom: 50px;
+
+		.work_meta{
+			.meta_value{
+				font-size: 90px;
+				line-height: 1;
+				font-weight: bold;
+			}
+		}
+	}
+}
+
+.no-flex, .no-flex .row{
+	display: block;
+}

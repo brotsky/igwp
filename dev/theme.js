@@ -18,3 +18,13 @@ $(document).ready(function() {
     }).mount();
   }
 });
+
+$(window).on("load scroll resize", function(){
+  $('.work_specification, .image-wrap').each(function () {
+    if ($(this).offset().top + 50 < $(window).scrollTop() + $(window).height()) {
+      $(this).addClass('animate-block');
+    }else{
+      $(this).removeClass('animate-block');
+    }
+  });
+});

@@ -20,3 +20,9 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+body:not(.home){
+	.site-content#content{
+		padding-top: 100px;
+	}
+}
