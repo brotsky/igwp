@@ -17,6 +17,8 @@ $(document).ready(function() {
       }
     }).mount();
   }
+
+  $('body.single-work .full_height_element header').height($(window).height() - $('header#masthead').height() - $('#content.site-content').offset().top);
 });
 
 $(window).on("load scroll resize", function(){
@@ -27,4 +29,8 @@ $(window).on("load scroll resize", function(){
       $(this).removeClass('animate-block');
     }
   });
+});
+
+$(window).on("resize", function(){
+  $('body.single-work .full_height_element header').height($(window).height() - $('header#masthead').height() - $('#content.site-content').offset().top);
 });

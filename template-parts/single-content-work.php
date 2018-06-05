@@ -10,14 +10,16 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="container-fluid">
+	<div class="container-fluid full_height_element">
 		<header class="row entry-header">
 			<div class="col-sm-6 no_side_padding">
 				<?php the_title( '<h1 class="entry-title text-center">', '</h1>' ); ?>
 			</div>
 
 			<div class="col-sm-6 no_side_padding">
-				<?php infinite_group_post_thumbnail(); ?>
+				<div class="thumbnail_wrapper">
+					<div class="thumbnail_bg" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_the_id(), 'full'); ?>);"></div>
+				</div>
 			</div>
 		</header><!-- .entry-header -->
 	</div>
@@ -107,8 +109,4 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
-
-	<footer class="entry-footer">
-		<?php infinite_group_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
