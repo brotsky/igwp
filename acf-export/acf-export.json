@@ -331,6 +331,36 @@
                         "ajax": 0,
                         "return_format": "value",
                         "placeholder": ""
+                    },
+                    {
+                        "key": "field_5b16ebf5e34ad",
+                        "label": "Hover Background Color",
+                        "name": "hover_background_color",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "default": "Default",
+                            "pink": "Pink",
+                            "teal": "Teal",
+                            "purple": "Purple",
+                            "sky_blue": "Sky Blue"
+                        },
+                        "default_value": [
+                            "default"
+                        ],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": ""
                     }
                 ]
             }
