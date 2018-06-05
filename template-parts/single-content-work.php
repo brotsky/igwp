@@ -21,6 +21,11 @@
 					<div class="thumbnail_bg" style="background-image: url(<?php echo get_the_post_thumbnail_url( get_the_id(), 'full'); ?>);"></div>
 				</div>
 			</div>
+			<div class="col-sm-12 text-center absolute_header_bottom">
+				<div class="down_icon_wrapper">
+					<div class="arrow_icon"><i class="fas fa-arrow-down"></i></div>
+				</div>
+			</div>
 		</header><!-- .entry-header -->
 	</div>
 

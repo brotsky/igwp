@@ -16,9 +16,26 @@
 
 		h1{
 			padding: 0 12.5rem 0 15rem;
-			padding-top: 34vh;
+			padding-top: 28vh;
 			height: 100%;
 			margin: 0;
+		}
+
+		.absolute_header_bottom{
+			position: absolute;
+			bottom: 0;
+			height: 70px;
+			background-color: #fff;
+
+			.arrow_icon{
+				font-size: 16px;
+				margin: 23px 0;
+				line-height: 24px;
+
+				i{
+					cursor: pointer;
+				}
+			}
 		}
 	}
 

@@ -7,10 +7,12 @@ function handle_fold_changes(){
 }
 
 function reload_fold(){
-  setTimeout(function(){
-    var section_name = $.scrollify.current().data('section-name');
-    $.scrollify.move('#'+section_name);
-  }, 500);
+  if($.scrollify.current()){
+    setTimeout(function(){
+      var section_name = $.scrollify.current().data('section-name');
+      $.scrollify.move('#'+section_name);
+    }, 500);
+  }
 }
 
 $(document).ready(function() {
