@@ -18,24 +18,25 @@
             display: block;
             text-align: center;
 
-            &.teal {
+            &.teal.hvr-sweep-to-top:before {
               background-color: $color__transparent_teal;
             }
 
-            &.pink {
+            &.pink.hvr-sweep-to-top:before {
               background-color: $color__transparent_pink;
             }
 
-            &.sky-blue {
+            &.sky_blue.hvr-sweep-to-top:before {
               background-color: $color__transparent_sky_blue;
+            }
+
+            &.purple.hvr-sweep-to-top:before {
+              background-color: $color__transparent_purple;
             }
             
             &.hvr-sweep-to-top:before{
-              
+              background-color: rgba(0,0,0,.4);
               z-index: 2;
-
-              
-
             }
 
             &:hover{
