@@ -28,7 +28,7 @@ $(document).ready(function() {
 });
 
 $(window).on("load scroll resize", function(){
-  $('.work_specification, .image-wrap').each(function () {
+  $('.work_specification, .image-wrap, .animate_image_parent').each(function () {
     if ($(this).offset().top + 50 < $(window).scrollTop() + $(window).height()) {
       $(this).addClass('animate-block');
     }else{
