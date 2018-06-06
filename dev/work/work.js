@@ -17,6 +17,9 @@ $(window).on("load scroll resize", function(){
 		}
 	});
 
+	var $title_wrapper_padding = ($('.work_title_wrapper').parent().height() - $('.work_title_wrapper').height() - $('.absolute_header_bottom').height()) / 2;
+	$('.work_title_wrapper').css('padding-top',$title_wrapper_padding + 'px');
+
 	var $simple_content_layout_height = $(window).height() - $('header#masthead').height();
 	$('.simple_content_layout').css('min-height', $simple_content_layout_height + 'px');
 	var $padding = $simple_content_layout_height - $('.simple_content_layout .work_layout').height();
