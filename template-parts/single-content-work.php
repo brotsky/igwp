@@ -46,26 +46,7 @@ $i = 0;
 					<div class="container">
 				<?php endif; ?>
 					<div class="row <?php echo get_row_layout(); ?>">
-						<?php if ( get_row_layout() == 'work_specification' ) : ?>
-
-							<?php if ( have_rows( 'specifications' ) ) : ?>
-								<div class="col-sm-8 specs_box">
-									<ul class="specs_ul">
-										<?php while ( have_rows( 'specifications' ) ) : the_row(); ?>
-											<li class="specs_li">
-												<span class="specs_label"><?php the_sub_field( 'label' ); ?></span>
-												<span class="specs_value"><?php the_sub_field( 'value' ); ?></span>
-											</li>
-										<?php endwhile; ?>
-									</ul>
-								</div>
-							<?php endif; ?>
-							<div class="col-sm-4 what_we_did_box">
-								<p class="label">What we did</p>
-								<?php the_sub_field( 'what_we_did' ); ?>
-							</div>
-
-						<?php elseif ( get_row_layout() == 'half_width_layout' ) : ?>
+						<?php if ( get_row_layout() == 'half_width_layout' ) : ?>
 
 							<?php if ( have_rows( 'layout_wrapper' ) ) : ?>
 								<div class="work_layout_box col-sm-12">
