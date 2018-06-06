@@ -212,6 +212,125 @@
         "description": ""
     },
     {
+        "key": "group_5b182f518b8f4",
+        "title": "Home Page Contact",
+        "fields": [
+            {
+                "key": "field_5b183030154bd",
+                "label": "Contact Fold Content",
+                "name": "contact_fold_content",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5b1830353f0fb": {
+                        "key": "5b1830353f0fb",
+                        "name": "one_column_content",
+                        "label": "One Column Content",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b183041154be",
+                                "label": "Content",
+                                "name": "content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5b18304b154bf": {
+                        "key": "5b18304b154bf",
+                        "name": "two_column_content",
+                        "label": "Two Column Content",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b18304b154c0",
+                                "label": "Left Column Content",
+                                "name": "left_column_content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            },
+                            {
+                                "key": "field_5b183052154c1",
+                                "label": "Right Column Content",
+                                "name": "right_column_content",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "all",
+                                "toolbar": "full",
+                                "media_upload": 1,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Add Row",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "home-template.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    },
+    {
         "key": "group_5afdd0706d70c",
         "title": "Home Page Works",
         "fields": [
@@ -509,94 +628,6 @@
                     "id": ""
                 },
                 "layouts": {
-                    "5b118e451d24a": {
-                        "key": "5b118e451d24a",
-                        "name": "work_specification",
-                        "label": "Work Specification",
-                        "display": "block",
-                        "sub_fields": [
-                            {
-                                "key": "field_5b118e51fa59b",
-                                "label": "Specifications",
-                                "name": "specifications",
-                                "type": "repeater",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "collapsed": "",
-                                "min": 0,
-                                "max": 0,
-                                "layout": "table",
-                                "button_label": "",
-                                "sub_fields": [
-                                    {
-                                        "key": "field_5b118e6cfa59c",
-                                        "label": "Label",
-                                        "name": "label",
-                                        "type": "text",
-                                        "instructions": "",
-                                        "required": 1,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        },
-                                        "default_value": "",
-                                        "placeholder": "",
-                                        "prepend": "",
-                                        "append": "",
-                                        "maxlength": ""
-                                    },
-                                    {
-                                        "key": "field_5b118e7afa59d",
-                                        "label": "Value",
-                                        "name": "value",
-                                        "type": "text",
-                                        "instructions": "",
-                                        "required": 1,
-                                        "conditional_logic": 0,
-                                        "wrapper": {
-                                            "width": "",
-                                            "class": "",
-                                            "id": ""
-                                        },
-                                        "default_value": "",
-                                        "placeholder": "",
-                                        "prepend": "",
-                                        "append": "",
-                                        "maxlength": ""
-                                    }
-                                ]
-                            },
-                            {
-                                "key": "field_5b118eddfa59e",
-                                "label": "What we did",
-                                "name": "what_we_did",
-                                "type": "wysiwyg",
-                                "instructions": "",
-                                "required": 0,
-                                "conditional_logic": 0,
-                                "wrapper": {
-                                    "width": "",
-                                    "class": "",
-                                    "id": ""
-                                },
-                                "default_value": "",
-                                "tabs": "all",
-                                "toolbar": "full",
-                                "media_upload": 1,
-                                "delay": 0
-                            }
-                        ],
-                        "min": "",
-                        "max": ""
-                    },
                     "5b118f0ffa5a0": {
                         "key": "5b118f0ffa5a0",
                         "name": "half_width_layout",
