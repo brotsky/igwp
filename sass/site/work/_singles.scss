@@ -14,11 +14,19 @@
 			}
 		}
 
-		h1{
-			padding: 0 12.5rem 0 15rem;
-			padding-top: 28vh;
-			height: 100%;
-			margin: 0;
+		.work_title_wrapper{
+			padding: 0 10rem 0 10rem;
+			padding-top: 24vh;
+
+			.entry-subtitle{
+				margin-bottom: 10px;
+			}
+			
+			h1{
+				font-size: 86px;
+				font-weight: bold;
+				margin: 0;
+			}
 		}
 
 		.absolute_header_bottom{
@@ -35,6 +43,18 @@
 				i{
 					cursor: pointer;
 				}
+			}
+		}
+	}
+
+	.simple_content_layout{
+		.work_layout_box{
+			padding-top: 0;
+			padding-bottom: 0;
+
+			.work_layout{
+				padding-top: 0;
+				padding-bottom: 0;
 			}
 		}
 	}
@@ -72,6 +92,7 @@
 
 	.work_specification{
 		padding-top: 50px;
+		padding-bottom: 50px;
 
 		// Loops to enumerate the classes for gallery columns.
 		@for $i from 0 through 9 {

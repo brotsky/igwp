@@ -16,6 +16,14 @@ $(window).on("load scroll resize", function(){
 			$(this).removeClass('animate-block');
 		}
 	});
+
+	var $simple_content_layout_height = $(window).height() - $('header#masthead').height();
+	$('.simple_content_layout').css('min-height', $simple_content_layout_height + 'px');
+	var $padding = $simple_content_layout_height - $('.simple_content_layout .work_layout').height();
+	if($padding > 0){
+		$('.simple_content_layout').css('padding-top',$padding/2 + 'px');
+		$('.simple_content_layout').css('padding-bottom',$padding/2 + 'px');
+	}
 });
 
 $(window).on("resize", function(){

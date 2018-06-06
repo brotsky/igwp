@@ -18,7 +18,10 @@ $i = 0;
 	<div class="container-fluid full_height_element">
 		<header class="row entry-header">
 			<div class="col-sm-6 no_side_padding animate_image_parent touch_sides dir_from_top">
-				<?php the_title( '<h1 class="entry-title text-center animate_child">', '</h1>' ); ?>
+				<div class="work_title_wrapper animate_child">
+					<p class="entry-subtitle"><?php the_field('subtitle'); ?></p>
+					<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+				</div>
 			</div>
 
 			<div class="col-sm-6 no_side_padding">
@@ -85,6 +88,21 @@ $i = 0;
 									endwhile; ?>
 								</div>
 							<?php endif; ?>
+
+						<?php elseif ( get_row_layout() == 'simple_content_layout' ) : ?>
+
+							<?php if ( have_rows( 'layout_wrapper' ) ) : ?>
+								<div class="work_layout_box col-sm-12">
+									<?php while ( have_rows( 'layout_wrapper' ) ) : the_row(); ?>
+										<div class="work_layout row no-flex">
+											<div class="col-sm-6 offset-sm-3">
+												<?php the_sub_field( 'content' ); ?>
+											</div>
+										</div>
+									<?php endwhile; ?>
+								</div>
+							<?php endif; ?>
+
 						<?php elseif ( get_row_layout() == 'fluid_width_layout' ) : ?>
 
 							<?php
