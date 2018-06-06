@@ -2,10 +2,11 @@
 
 @import "home-works";
 @import "carousel-about-us";
+@import "home-contact";
 
 #fold-navigation {
   position: fixed;
-  right: 100px;
+  right: 50px;
   top: 50%;
   margin: 0;
   list-style: none;
@@ -60,5 +61,10 @@
     }
   }
 
+}
 
+body.home{
+  .site-footer{
+    margin-top: -64px;
+  }
 }

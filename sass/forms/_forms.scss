@@ -1,3 +1,11 @@
 @import "buttons";
 
 @import "fields";
+
+.gform_wrapper{
+	ul.gform_fields{
+		li.gfield{
+			margin-top: 25px;
+		}
+	}
+}

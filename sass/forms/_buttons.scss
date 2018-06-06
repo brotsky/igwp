@@ -6,17 +6,28 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	border-radius: 3px;
 	background: $color__background-button;
-	color: rgba(0, 0, 0, .8);
+	color: $color__brown;
 	@include font-size(0.75);
 	line-height: 1;
-	padding: .6em 1em .4em;
+	padding: .4em 1em .4em;
+	transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+	cursor: pointer;
+	font-weight: bold;
 
 	&:hover {
 		border-color: $color__border-button-hover;
+		color: $color__white;
+		background-color: $color__brown;
 	}
 
 	&:active,
 	&:focus {
 		border-color: $color__border-button-focus;
+	}
+}
+
+.gform_wrapper{
+	.gform_footer{
+		text-align: center;
 	}
 }
