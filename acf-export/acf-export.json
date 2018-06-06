@@ -388,6 +388,25 @@
         "title": "Works",
         "fields": [
             {
+                "key": "field_5b181dafc7a51",
+                "label": "Subtitle",
+                "name": "subtitle",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
                 "key": "field_5afdcf720a766",
                 "label": "Gallery",
                 "name": "gallery",
@@ -600,7 +619,7 @@
                                 "collapsed": "",
                                 "min": 0,
                                 "max": 0,
-                                "layout": "table",
+                                "layout": "",
                                 "button_label": "",
                                 "sub_fields": [
                                     {
@@ -629,6 +648,56 @@
                                     },
                                     {
                                         "key": "field_5b119496e4077",
+                                        "label": "Content",
+                                        "name": "content",
+                                        "type": "wysiwyg",
+                                        "instructions": "",
+                                        "required": 1,
+                                        "conditional_logic": 0,
+                                        "wrapper": {
+                                            "width": "",
+                                            "class": "",
+                                            "id": ""
+                                        },
+                                        "default_value": "",
+                                        "tabs": "all",
+                                        "toolbar": "full",
+                                        "media_upload": 1,
+                                        "delay": 0
+                                    }
+                                ]
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5b181ff12515d": {
+                        "key": "5b181ff12515d",
+                        "name": "simple_content_layout",
+                        "label": "Simple Content Layout",
+                        "display": "block",
+                        "sub_fields": [
+                            {
+                                "key": "field_5b181ff12515e",
+                                "label": "Layout Wrapper",
+                                "name": "layout_wrapper",
+                                "type": "repeater",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "collapsed": "",
+                                "min": 0,
+                                "max": 0,
+                                "layout": "table",
+                                "button_label": "",
+                                "sub_fields": [
+                                    {
+                                        "key": "field_5b181ff125160",
                                         "label": "Content",
                                         "name": "content",
                                         "type": "wysiwyg",
