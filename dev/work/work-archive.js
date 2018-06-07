@@ -21,11 +21,14 @@ $(window).on("load", function(){
 	});
 
 	$('.flexslider2').flexslider({
+		before: function(slider){
+			$('.flexslider1').flexslider(slider.animatingTo);
+		},
 		controlNav: false,
 		directionNav: false,
 		animation: 'slide',
 		direction: 'vertical',
-		// mousewheel: true,
+		mousewheel: true,
 		slideshow: false,
 		initDelay: 200
 	});
@@ -39,4 +42,5 @@ $(window).on("load resize", function(){
 	$('#slider_row').height($(window).height() - $('header#masthead').height() - $('#content.site-content').offset().top - 70);
 
 	$('.slider_instance, .flexslider2.slider_instance li').height($(window).height() - $('header#masthead').height() - $('#content.site-content').offset().top - 70);
+	adjust_heading();
 });
