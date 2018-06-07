@@ -64,30 +64,42 @@ function get_work($id)
 
 class Work
 {
-    public function __construct($post)
-    {
-        $this->ID = $post->ID;
-        $this->title = $post->post_title;
-        $this->content = $post->post_content;
-        $this->url = get_permalink($this->ID);
-        $this->meta = get_post_meta($this->ID);
-        $this->gallery = get_field('gallery', $this->ID);
-    }
+	public function __construct($post)
+	{
+		$this->ID = $post->ID;
+		$this->title = $post->post_title;
+		$this->content = $post->post_content;
+		$this->url = get_permalink($this->ID);
+		$this->meta = get_post_meta($this->ID);
+		$this->gallery = get_field('gallery', $this->ID);
+	}
 
-    public function get_home_page_image()
-    {
-      if(sizeof($this->gallery) > 0)
-        return $this->gallery[0]['image'];
-      return false;
-    }
+	public function get_home_page_image()
+	{
+		if(sizeof($this->gallery) > 0)
+			return $this->gallery[0]['image'];
+		return false;
+	}
 
-    public function get_thumbnail($size)
-    {
-        return wp_get_attachment_image($this->thumbnail_id, $size);
-    }
+	public function get_thumbnail($size)
+	{
+		return wp_get_attachment_image($this->thumbnail_id, $size);
+	}
 
-    public function get_thumbnail_url($size)
-    {
-        return get_the_post_thumbnail_url($this->ID, $size);
-    }
+	public function get_thumbnail_url($size)
+	{
+		return get_the_post_thumbnail_url($this->ID, $size);
+	}
+
+	public function get_category_ids()
+	{
+		$work_categories = get_categories( array( 'taxonomy' => 'category' ) );
+		$work_ids = array();
+		// echo "<pre>";print_r($work_categories);echo "</pre>";
+		foreach ($work_categories as $work_category) {
+			$work_ids[] = $work_category->cat_ID;
+		}
+
+		return $work_ids;
+	}
 }

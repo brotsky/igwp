@@ -1,0 +1,43 @@
+.custom_slider_control{
+	a{
+		color: $color__brown;
+		line-height: 70px;
+		margin: 0 15px;
+		cursor: pointer;
+	}
+}
+.fixed_at_bottom{
+	position: fixed;
+	bottom: 0;
+	height: 70px;
+	background-color: #fff;
+}
+
+#slider_row{
+	overflow: hidden;
+
+	.slider_title{
+		h3{
+			font-size: 55px;
+			font-weight: bold;
+		}
+	}
+
+	.slider_thumb_wrapper{
+		position: relative;
+
+		.slider_thumb{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-position: center;
+			background-size: cover;
+		}
+	}
+}
+
+.post-type-archive-work{
+	footer.site-footer{ display: none; }
+}

@@ -6,6 +6,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
     "@glidejs/glide": "^3.0.3",
+    "flexslider": "^2.7.0",
     "gulp": "^3.9.1",
     "gulp-plumber": "^1.2.0",
     "hover.css": "^2.3.1",
