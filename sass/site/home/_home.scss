@@ -14,11 +14,11 @@
 
   li {
     cursor: pointer;
-    color: $color__light-brown;
+    color: $color__theme_light;
 
     &.active {
     	font-size: 1.8em;
-    	color: $color__brown;
+    	color: $color__theme_dark;
     }
   }
 }
@@ -34,11 +34,11 @@
     blockquote{
       margin-left: 0;
       padding-left: 15px;
-      border-left: 2px solid $color__light-brown;
+      border-left: 2px solid $color__theme_light;
     }
 
     .highlighted p{
-      color: $color__light-brown;
+      color: $color__theme_light;
     }
   }
 
@@ -50,12 +50,12 @@
 
       a{
         font-size: 1.4em;
-        color: $color__light-brown;
+        color: $color__theme_light;
         display: inline-block;
         margin-left: 10px;
 
         &:hover{
-          color: $color__brown;
+          color: $color__theme_dark;
         }
       }
     }

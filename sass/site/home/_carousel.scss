@@ -21,12 +21,12 @@
 
           .title-top{
             font-size: 2.8em;
-            color: $color__brown;
+            color: $color__theme_dark;
           }
 
           .title-bottom{
             font-size: 3.5em;
-            color: $color__brown;
+            color: $color__theme_dark;
           }
 
           .description{
@@ -48,11 +48,11 @@
       border-radius: 0;
 
       &:hover, &:focus {
-        border-color: $color__light_brown;
+        border-color: $color__theme_light;
       }
 
       &.glide__bullet--active {
-        background-color: $color__light_brown;
+        background-color: $color__theme_light;
       }
 
     }

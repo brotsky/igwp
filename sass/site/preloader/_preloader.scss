@@ -1,7 +1,7 @@
 #preloader {
   width: 100vw;
   height: 100vh;
-  background: $color__brown;
+  background: $color__theme_dark;
   color: $color__white;
 
   .container {
@@ -79,7 +79,7 @@
           fill-rule:evenodd;
           clip-rule:evenodd;
           fill:none;
-          stroke: $color__brown;
+          stroke: $color__theme_dark;
           stroke-width:13;
           stroke-miterlimit:10;
         }

@@ -44,11 +44,11 @@
 		position: relative;
 
 		&:hover > a{
-			color: $color__light-brown;
+			color: $color__theme_light;
 			
 			&:after {
 				content: '';
-				background-color: $color__light-brown;
+				background-color: $color__theme_light;
 				width: 100%;
 				left: 0;
 			}
@@ -87,11 +87,11 @@
 	.current-menu-item > a,
 	.current_page_ancestor > a,
 	.current-menu-ancestor > a {
-		color: $color__light-brown;
+		color: $color__theme_light;
 
 		&:after {
 			content: '';
-			background-color: $color__light-brown;
+			background-color: $color__theme_light;
 			width: 100%;
 			left: 0;
 		}

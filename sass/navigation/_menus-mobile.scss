@@ -1,7 +1,7 @@
 @media screen and (max-width: 767px){
 
 	header#masthead{
-		background-color: $color__brown;
+		background-color: $color__theme_dark;
 	}
 
 	.main-navigation{
@@ -39,7 +39,7 @@
 				right: 0;
 				top: 100px;
 				bottom: 0;
-				background: $color__brown;
+				background: $color__theme_dark;
 				z-index: 5;
 
 				li{

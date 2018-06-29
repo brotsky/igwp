@@ -6,7 +6,7 @@ input[type="submit"] {
 	border-color: $color__border-button;
 	border-radius: 3px;
 	background: $color__background-button;
-	color: $color__brown;
+	color: $color__theme_dark;
 	@include font-size(0.75);
 	line-height: 1;
 	padding: .4em 1em .4em;
@@ -17,7 +17,7 @@ input[type="submit"] {
 	&:hover {
 		border-color: $color__border-button-hover;
 		color: $color__white;
-		background-color: $color__brown;
+		background-color: $color__theme_dark;
 	}
 
 	&:active,

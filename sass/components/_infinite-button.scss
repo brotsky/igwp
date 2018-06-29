@@ -4,7 +4,7 @@
   display: inline-block;
 
   .infinite-button {
-    color: $color__light-brown;
+    color: $color__theme_light;
     border-radius: 0;
     background-color: $color__white;
     border: 0;
@@ -15,13 +15,13 @@
 
     &.hvr-sweep-to-top {
       &:before {
-        background: $color__light-brown;
+        background: $color__theme_light;
       }
     }
   }
 
   .infinite-button-border {
-    border: 2px solid $color__light-brown;
+    border: 2px solid $color__theme_light;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -33,7 +33,7 @@
   &.hover {
 
     .infinite-button {
-      background-color: $color__light-brown;
+      background-color: $color__theme_light;
       color: $color__white;
       box-shadow: 1px 1px 10px $color__grey;
     }
