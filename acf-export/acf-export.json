@@ -844,13 +844,13 @@
                 {
                     "param": "taxonomy",
                     "operator": "==",
-                    "value": "category"
+                    "value": "work-category"
                 }
             ]
         ],
         "menu_order": 0,
         "position": "normal",
-        "style": "acftc-group-0",
+        "style": "default",
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
