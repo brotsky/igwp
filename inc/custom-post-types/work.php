@@ -36,7 +36,7 @@ function work_custom_post_type() {
 		'description'           => __( 'Post Type Description', 'infinite_group' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail' ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+		'taxonomies'            => array(),
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,
