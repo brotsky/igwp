@@ -52,6 +52,31 @@ function work_custom_post_type() {
 	);
 	register_post_type( 'work', $args );
 
+	// Add new taxonomy, make it hierarchical (like categories)
+	$labels = array(
+		'name'              => _x( 'Work Category', 'taxonomy general name', 'infinite_group' ),
+		'singular_name'     => _x( 'Work Category', 'taxonomy singular name', 'infinite_group' ),
+		'search_items'      => __( 'Work Categories', 'infinite_group' ),
+		'all_items'         => __( 'All Work Categories', 'infinite_group' ),
+		'parent_item'       => __( 'Parent', 'infinite_group' ),
+		'parent_item_colon' => __( 'Parent:', 'infinite_group' ),
+		'edit_item'         => __( 'Edit Work Category', 'infinite_group' ),
+		'update_item'       => __( 'Update Work Category', 'infinite_group' ),
+		'add_new_item'      => __( 'Add New Work Category', 'infinite_group' ),
+		'new_item_name'     => __( 'New Work Category', 'infinite_group' ),
+		'menu_name'         => __( 'Work Category', 'infinite_group' ),
+	);
+
+	$args = array(
+		'hierarchical'      => true,
+		'labels'            => $labels,
+		'show_ui'           => true,
+		'show_admin_column' => true,
+		'query_var'         => true,
+		'rewrite'           => array( 'slug' => 'work-category' ),
+	);
+
+	register_taxonomy( 'work-category', array( 'work' ), $args );
 }
 add_action( 'init', 'work_custom_post_type', 0 );
 
@@ -98,6 +123,18 @@ class Work
 		// echo "<pre>";print_r($work_categories);echo "</pre>";
 		foreach ($work_categories as $work_category) {
 			$work_ids[] = $work_category->cat_ID;
+		}
+
+		return $work_ids;
+	}
+
+	public function get_category_term_ids()
+	{
+		$work_categories = get_categories( array( 'taxonomy' => 'work-category' ) );
+		$work_ids = array();
+		// echo "<pre>";print_r($work_categories);echo "</pre>";
+		foreach ($work_categories as $work_category) {
+			$work_ids[] = $work_category->term_id;
 		}
 
 		return $work_ids;

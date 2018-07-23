@@ -20,6 +20,12 @@
 		h3{
 			font-size: 55px;
 			font-weight: bold;
+
+			a{
+				&:hover{
+					text-decoration: none;
+				}
+			}
 		}
 	}
 
@@ -35,6 +41,10 @@
 			background-position: center;
 			background-size: cover;
 		}
+	}
+
+	.col-sm-6{
+		cursor: pointer;
 	}
 }
 

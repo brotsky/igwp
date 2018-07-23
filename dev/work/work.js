@@ -6,6 +6,12 @@ $(document).ready(function(){
 			scrollTop: $('.entry-content').offset().top - $('header#masthead').height() - $('#content.site-content').offset().top
 		}, 500);
 	});
+
+	$(document).on('click', '#slider_row .col-sm-6', function(e){
+		e.stopPropagation();
+		e.preventDefault();
+		window.location = $('.flex-active-slide a').attr('href');
+	});
 });
 
 $(window).on("load scroll resize", function(){

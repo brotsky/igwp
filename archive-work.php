@@ -26,7 +26,7 @@ $term_id_prefixed = $taxonomy_prefix .'_'. $term_id;*/
 
 				<?php
 				$work = new Work($post);
-				$work_category_ids = $work::get_category_ids();
+				$work_category_ids = $work::get_category_term_ids();
 				?>
 					<div class="col-sm-6 no_side_padding">
 						<div class="flexslider1 slider_instance">
@@ -36,7 +36,11 @@ $term_id_prefixed = $taxonomy_prefix .'_'. $term_id;*/
 								?>
 								<!-- Place somewhere in the <body> of your page -->
 								<li class="slider_title text-center">
-									<h3><?php echo get_cat_name( $work_category_id ); ?></h3>
+									<h3>
+										<a href="<?php echo get_term_link( $work_category_id ); ?>">
+											<?php echo get_term( $work_category_id )->name; ?>
+										</a>
+									</h3>
 								</li>
 								<?php
 							}
@@ -53,13 +57,12 @@ $term_id_prefixed = $taxonomy_prefix .'_'. $term_id;*/
 								?>
 								<!-- Place somewhere in the <body> of your page -->
 								<?php
-								$thumbnail = get_field( 'thumbnail', 'category_'.$work_category_id );
+								$thumbnail = get_field( 'thumbnail', 'work-category_'.$work_category_id );
 								if ( $thumbnail ) { ?>
 								<li class="slider_thumb_wrapper">
 									<div class="slider_thumb" style="background-image:url(<?php echo $thumbnail['url']; ?>);" alt="<?php echo $thumbnail['alt']; ?>">
 										&nbsp;
 									</div>
-										<!-- <img src="<?php echo $thumbnail['url']; ?>" alt="<?php echo $thumbnail['alt']; ?>" /> -->
 								</li>
 								<?php
 								}

@@ -1,0 +1,57 @@
+.taxonomy-article_wrapper{
+	margin-bottom: 30px;
+
+	article{
+		height: 300px;
+		margin-bottom: 30px;
+
+		.tax-article-detail{
+			display: block;
+			height: 100%;
+			background-size: cover;
+
+			h2{
+				display: none;
+				padding-top: 120px;
+			}
+
+			&:hover{
+				text-decoration: none;
+
+				h2{
+					position: relative;
+					display: block;
+					color: $color__white;
+					z-index: 2;
+				}
+
+				&:after{
+					position: absolute;
+					content: '';
+					left: 15px;
+					right: 15px;
+					top: 0;
+					bottom: 0;
+					background-color: $color__theme_dark;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 767px){
+	body.tax-work-category{
+
+		main#main{
+			padding-left: 15px;
+			padding-right: 15px;
+
+			.taxonomy-article_wrapper{
+
+				article{
+					height: 200px;
+				}
+			}
+		}
+	}
+}

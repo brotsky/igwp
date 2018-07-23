@@ -199,3 +199,19 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+
+/**
+ * @desc Set posts per page for custom post types and taxonomies
+ */
+function infinitegroup_custom_posts_per_page($query) {
+	if (!$query->is_main_query())
+		return $query;
+	elseif ($query->is_tax('work-category'))
+		$query->set('posts_per_page', '-1');
+	return $query;
+}
+
+// Apply pre_get_posts filter - ensure this is not called when in admin
+if (!is_admin()) {
+	add_filter('pre_get_posts', 'infinitegroup_custom_posts_per_page');
+}
