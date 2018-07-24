@@ -51,3 +51,11 @@
 .post-type-archive-work{
 	footer.site-footer{ display: none; }
 }
+
+.flexslider1{
+	.flex-viewport{
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+		top: 50%;
+	}
+}
