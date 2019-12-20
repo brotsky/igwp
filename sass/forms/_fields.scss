@@ -16,6 +16,9 @@ input[type="color"],
 textarea {
 	color: $color__text-input;
 	border: 1px solid $color__border-input;
+	border-left: 0;
+	border-right: 0;
+	border-top: 0;
 	border-radius: 3px;
 	padding: 3px;
 	background-color: $color__background-body;
@@ -31,4 +34,9 @@ select {
 
 textarea {
 	width: 100%;
+}
+.name_first{
+	label{
+		display: none !important;
+	}
 }

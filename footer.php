@@ -14,7 +14,9 @@
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer">
-		<div class="site-info">
+		<div class="site-info text-center">
+				All Rights Reserved. Infinite Manufacturing Group &copy; <?php echo date('Y'); ?>
+				<br/><br/>
 				<?php
 				printf( esc_html__( 'Website Developed by %1$s.', 'infinite_group' ), '<a href="https://www.cadre.haus">Cadre</a>' );
 				?>

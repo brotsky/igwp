@@ -207,6 +207,10 @@
 
 		.gallery_image_col{
 			margin-bottom: 30px;
+
+			&:last-child{
+				margin-bottom: 0;
+			}
 		}
 	}
 }
