@@ -39,7 +39,7 @@
                   ?>
                   <div class="row image-content-row">
                     <div class="image-container">
-                      <a href="<?php the_permalink( $featured_work['work']->ID ); ?>" class="hvr-sweep-to-top <?php echo $featured_work['hover_background_color']; ?>">
+                      <a href="<?php echo get_post_type_archive_link('work');//the_permalink( $featured_work['work']->ID ); ?>" class="hvr-sweep-to-top <?php echo $featured_work['hover_background_color']; ?>">
                         <img src="<?php echo $imageUrl; ?>" alt="" />
                         <div class="hover-detail">
                           <h4>View Gallery</h4>
