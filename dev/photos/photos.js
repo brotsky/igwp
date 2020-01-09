@@ -17,5 +17,5 @@ $("#filters button").click(function(){
 });
 
 $(document).ready(function(){
-    $('.smart-gallery-item').magnificPopup({type:'image'});
+    // $('.smart-gallery-item').magnificPopup({type:'image'});
 });
